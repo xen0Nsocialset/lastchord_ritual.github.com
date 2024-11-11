@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Онлайн Касса</title>
+</head>
+<body>
+    <header>
+        <h1>Онлайн Касса</h1>
+        <nav>
+            <label for="seller-selector">Выберите продавца:</label>
+            <select id="seller-selector"></select>
+        </nav>
+    </header>
+
+    <main>
+        <div class="admin-panel">
+            <h2>Добавить Товар</h2>
+            <input type="text" id="product-name" placeholder="Название товара">
+            <input type="number" id="product-price" placeholder="Цена">
+            <button id="add-product">Добавить товар</button>
+        </div>
+
+        <div class="product-list">
+            <h2>Список товаров</h2>
+            <ul id="products"></ul>
+        </div>
+
+    <div class="cart">
+    <h2>Корзина</h2>
+    <ul id="cart-items"></ul>
+    <label for="payment-method">Способ оплаты:</label>
+   <select id="payment-method">
+    <option value="cash">Наличные</option>
+    <option value="card">Перевод</option>
+</select>
+
+<div id="cash-change" style="display:none;">
+    <label for="cash-amount">Сумма наличными:</label>
+    <input type="number" id="cash-amount" placeholder="Введите сумму" />
+    <p id="change"></p>
+</div>
+
+    <button id="calculate">Рассчитать</button>
+</div>
+
+
+        <div class="receipt" id="receipt" style="display:none;">
+            <h1>Чек</h1>
+            <p>Магазин: Последний Аккордъ</p>
+            <P>ИНН: 860409766267</p>
+            <p>Продавец: <span id="selected-seller"></span></p>
+            <p>Способ оплаты: <span id="selected-payment-method"></span></p>
+            <p>Дата и время: <span id="timestamp"></span></p>
+            <h2>Товары</h2>
+            <ul id="receipt-items"></ul>
+            <p>Итого: <span id="total"></span></p>
+            <p id="cash-change" style="display:none;">Сдача: <span id="change"></span></p>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Онлайн Касса</title>
+</head>
+<body> <center><br><br><br><br>
+    <div style="  Width: 250px; height: 310px; Border: 1px Solid #ccc; border-radius: 5px; Padding: 10px" class="Login">
+        <h1>Войдите</h1>
+         <p style="font-size: 16px; color: red;" id="error"></p><br>
+        <input placeholder="Логин" type="text" id="log"></input><br>
+        <input style="   width: calc(100% - 22px); padding: 10px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc;" type="password" id="pass" placeholder="Пароль"></input><br><br>
+        <button onclick="myf()">Войти</button>
+        
+    </div>
+    </center>
+    
+    
+    <script>
+        
+        function myf(){
+            
+            let log = document.getElementById("log").value;
+            let pass = document.getElementById("pass").value;
+            
+            if(log == "admin", "SadCat" && pass == "1488257934"){
+                window.location.href = "cassa.html"
+            } else{
+              document.getElementById("error").innerHTML ="ERROR";
+            
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
